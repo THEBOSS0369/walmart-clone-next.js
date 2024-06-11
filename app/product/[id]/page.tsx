@@ -23,6 +23,8 @@ const delay = (ms: any) => new Promise((res) => setTimeout(res, ms));
 const ProductPage = async ({ params }: Props) => {
   if (isNaN(Number(params.id))) notFound();
   const product = await fetchProductById(params.id);
+  if (!product) notFound();
+
   await delay(1000);
   return (
     <div className="fp-4 lg:p-10 flex flex-col lg:flex-row w-full">
