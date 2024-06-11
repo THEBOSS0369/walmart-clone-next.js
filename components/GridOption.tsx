@@ -4,16 +4,17 @@ import Link from "next/link";
 import React from "react";
 type Props = {
   title: string;
+  query: string;
   className?: string;
   image?: string;
 };
 
-const GridOption = ({ title, className, image }: Props) => {
+const GridOption = ({ title, query, className, image }: Props) => {
   return (
     <Link
       href={{
         pathname: "/search",
-        query: { q: title },
+        query: { q: query },
       }}
       className={cn("grid-option relative", className)}
     >
