@@ -19,9 +19,9 @@ const Basket = () => {
           return (
             <li
               key={sku}
-              className="p-5 my-2 flex items-center justify-between"
+              className="p-0 md:p-5 my-2 flex items-center justify-between"
             >
-              <div className="flex gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 <Image
                   src={items[0].thumbnail}
                   width={70}
@@ -33,7 +33,7 @@ const Basket = () => {
                   <p className="text-sm text-gray-500">{items[0].sku}</p>
                 </div>
               </div>
-              <div className="flex space-x-4 pl-4">
+              <div className="flex  flex-col md:flex-row gap-2 space-x-4 pl-4">
                 <AddToCartButton product={items[0]} />
                 <p className="text-lg font-semibold">
                   {items.length} x ${items[0].price}
@@ -48,9 +48,21 @@ const Basket = () => {
         <p className="font-bold text-2xl text-right text-walmart mb-5">
           Total: {basketTotal}
         </p>
-        <Button className="text-md mt-5 h-16 bg-walmart hover:bg-walmart/50">
+        <Button
+          onClick={() => {
+            alert("we will add stripe for payments soon.");
+          }}
+          className="text-md mt-5 h-16 bg-walmart hover:bg-walmart/50"
+        >
           Proceed to Checkout
         </Button>
+        <Image
+          className="ms-auto mt-5"
+          src="/logo-stripe.png"
+          alt="stripe"
+          width={200}
+          height={50}
+        />
       </div>
     </div>
   );
