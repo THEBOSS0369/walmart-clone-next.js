@@ -30,7 +30,12 @@ const Header = () => {
   return (
     <header className="flex flex-col md:flex-row bg-walmart items-center px-10 py-7 space-x-0  md:space-x-5 space-y-5 md:space-y-0">
       <Link href="/" className="">
-        <Image src="/Walmart.png" alt="Walmart Logo" width={160} height={40} />
+        <Image
+          src="/Walmart_logo.svg"
+          alt="Walmart Logo"
+          width={160}
+          height={40}
+        />
       </Link>
       <form
         onSubmit={handleSubmit}
