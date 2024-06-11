@@ -24,7 +24,7 @@ const GridOption = ({ title, query, className, image }: Props) => {
           src={image}
           alt={title}
           layout="fill"
-          className="object-cover opacity-20 rounded-md"
+          className="object-cover opacity-40 hover:opacity-100 transition-all rounded-md"
         />
       )}
     </Link>
